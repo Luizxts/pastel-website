@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte Seu Pastel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monte Seu Pastel</h1>
+        <form id="pastelForm">
+            <div class="columns">
+                <fieldset>
+                    <legend>Pastel Salgado</legend>
+                    <div class="options">
+                        <label><input type="checkbox" name="recheio" value="Carne Moída"> Carne Moída</label>
+                        <label><input type="checkbox" name="recheio" value="Frango"> Frango</label>
+                        <label><input type="checkbox" name="recheio" value="Calabresa"> Calabresa</label>
+                        <label><input type="checkbox" name="recheio" value="Bacon"> Bacon</label>
+                        <label><input type="checkbox" name="recheio" value="Queijo Minas"> Queijo Minas</label>
+                        <label><input type="checkbox" name="recheio" value="Queijo Mussarela"> Queijo Mussarela</label>
+                        <label><input type="checkbox" name="recheio" value="Queijo Ralado"> Queijo Ralado</label>
+                        <label><input type="checkbox" name="recheio" value="Alho Frito"> Alho Frito</label>
+                        <label><input type="checkbox" name="recheio" value="Presunto"> Presunto</label>
+                        <label><input type="checkbox" name="recheio" value="Ovo de Codorna"> Ovo de Codorna</label>
+                        <label><input type="checkbox" name="recheio" value="Cebola"> Cebola</label>
+                        <label><input type="checkbox" name="recheio" value="Azeitona"> Azeitona</label>
+                        <label><input type="checkbox" name="recheio" value="Coentro/Cebolinha"> Coentro/Cebolinha</label>
+                        <label><input type="checkbox" name="recheio" value="Orégano"> Orégano</label>
+                        <label><input type="checkbox" name="recheio" value="Ervilha"> Ervilha</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Pastel Doce</legend>
+                    <div class="options">
+                        <label><input type="checkbox" name="recheio" value="Passas"> Passas</label>
+                        <label><input type="checkbox" name="recheio" value="Banana"> Banana</label>
+                        <label><input type="checkbox" name="recheio" value="Morango"> Morango</label>
+                        <label><input type="checkbox" name="recheio" value="Goiabada"> Goiabada</label>
+                        <label><input type="checkbox" name="recheio" value="Coco"> Coco</label>
+                        <label><input type="checkbox" name="recheio" value="Açúcar com Canela"> Açúcar com Canela</label>
+                    </div>
+                </fieldset>
+            </div>
+            <fieldset>
+                <legend>Adicionais (R$3 cada)</legend>
+                <div class="options">
+                    <label><input type="checkbox" name="adicional" value="Nutella" onchange="atualizarValor()"> Nutella</label>
+                    <label><input type="checkbox" name="adicional" value="Cheddar" onchange="atualizarValor()"> Cheddar</label>
+                    <label><input type="checkbox" name="adicional" value="Catupiry" onchange="atualizarValor()"> Catupiry</label>
+                </div>
+            </fieldset>
+            <div class="total">
+                <p>Valor do Pastel: R$ <span id="valorTotal">17.00</span></p>
+            </div>
+            <button type="button" onclick="enviarPedido()">Confirmar Pedido</button>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
